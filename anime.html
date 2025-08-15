@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Watchly — Cinematic tracker</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="anime.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">W</div>
+      <div>
+        <h1>Watchly</h1>
+        <small>Web Series & Movies — Your Cinematic tracker</small>
+      </div>
+    </div>
+
+    <div class="controls">
+      <input id="search" class="search" placeholder="Search titles, e.g. Inception..." />
+      <select id="typeFilter" class="select">
+        <option value="All">All Types</option>
+        <option value="Web Series">Web Series</option>
+        <option value="Movie">Movie</option>
+      </select>
+
+      <select id="genreFilter" class="select">
+        <option value="All">All Genres</option>
+        <option>Action</option>
+        <option>Adventure</option>
+        <option>Drama</option>
+        <option>Comedy</option>
+        <option>Thriller</option>
+        <option>Romance</option>
+        <option>Sci-Fi</option>
+        <option>Fantasy</option>
+        <option>Horror</option>
+      </select>
+
+      <select id="statusFilter" class="select">
+        <option value="All">All Status</option>
+        <option>Completed</option>
+        <option>On Hold</option>
+        <option>Dropped</option>
+        <option>Plan to Watch</option>
+        <option>watching</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <section id="statsBar" class="statsbar">
+      <div><strong id="countShown">0</strong> items shown</div>
+      <div class="mini-stats">
+        <div>Completed: <span id="statCompleted">0</span></div>
+        <div>Plan: <span id="statPlan">0</span></div>
+        <div>Dropped: <span id="statDropped">0</span></div>
+      </div>
+    </section>
+
+    <section id="grid" class="grid">
+      <!-- cards inserted here -->
+    </section>
+  </main>
+
+  <!-- Status Modal -->
+  <div id="statusModal" class="modal hidden" aria-hidden="true">
+    <div class="modal-card">
+      <button id="closeModal" class="modal-close">✕</button>
+      <div class="modal-body">
+        <h2 id="modalTitle">Title</h2>
+        <p id="modalMeta" class="muted"></p>
+        <label for="modalStatus">Update status</label>
+        <select id="modalStatus" class="select full">
+          <option>Completed</option>
+          <option>On Hold</option>
+          <option>Dropped</option>
+          <option>Plan to Watch</option>
+          <option>watching</option>
+        </select>
+        <div class="modal-actions">
+          <button id="saveStatus" class="btn primary">Save</button>
+          <button id="cancelStatus" class="btn ghost">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer 
+  <div class="footer-container">
+      <div class="footer-section">
+        <h4>Contact Us</h4>
+        <p>Email: support@watchly.com<br>
+        Phone: +91 98765 43210<br>
+        Address: Sector 22,Jaipur,Rajasthan,India</p>
+      </div>
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © 2025 watchly. All rights reserved.
+    </div>
+  </footer>
+
+
+  <script src="anime.js"></script>
+</body>
+</html>
